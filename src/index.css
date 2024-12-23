@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.carrito,.carrito2{
+    height:400px;
+}
+.dropimage{
+    filter:drop-shadow(15px 7px 5px black);
+}
+.CardProdcut{
+    height:450px;
+}
+.CardReseña{
+    height:450px;
+}
+@media (max-width: 1208px) {
+    .carrito,.carrito2 {
+        height: 500px;
+    }
+}
+@media (max-width: 768px) {
+    .carrito,.carrito2 {
+        height: 400px;
+        overflow-y: scroll;
+    }
+}
