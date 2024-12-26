@@ -1,4 +1,4 @@
-import random from 'random';
+/*import random from 'random';
 import { format } from 'date-fns';
 const brands = ["Adidas", "Puma", "Reebok", "Nike"];
 const categories = ["Running", "Casual", "Basketball", "Soccer", "Training"];
@@ -45,3 +45,4 @@ for (let i = 1; i <= 100; i++) {
 }
 
 export default products;
+*/

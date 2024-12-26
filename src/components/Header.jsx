@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaHome, FaShoppingCart, FaInfoCircle, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaInfoCircle, FaBars, FaTimes, FaHeart } from "react-icons/fa";
 import { useState } from "react";
 
 const Header = () => {
@@ -48,6 +48,9 @@ const Header = () => {
             className="flex items-center gap-2 px-4 py-2 transition-all duration-300 rounded-md hover:bg-white hover:text-black"
           >
             <FaInfoCircle /> <span>About</span>
+          </Link>
+          <Link to="/favorites" className="flex items-center">
+            <FaHeart className="mr-2" /> Favoritos
           </Link>
         </nav>
       </div>

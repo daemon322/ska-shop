@@ -7,6 +7,12 @@ const promotionalTexts = [
   "Unmatched quality for every style.",
   "Grab your perfect fit today!",
   "Special discounts available now.",
+  "Nuevos Productos cada día.",
+  "Ofertas Especiales los fines de semana.",
+  "Descuentos para usuarios registrados.",
+  "Combina elegantes estilos.",
+  "Paga ahora con nuestros planes.",
+  "única a nivel Nacional.",
 ];
 
 const ImageSlider = () => {

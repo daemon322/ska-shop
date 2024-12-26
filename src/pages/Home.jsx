@@ -4,9 +4,9 @@ import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import ProductCard from "../components/ProductCard";
 import CategoryFilter from "../components/CategoryFilter";
-import products from "../data/products";
+import { products } from "../data/shoesproducts";
 import ImageSlider from "../components/ImageSlider";
-import { MdSearch } from "react-icons/md";
+import { MdSearch, MdZoomIn, MdZoomOut } from "react-icons/md";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
@@ -17,6 +17,7 @@ const Home = () => {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isSaleModalOpen, setIsSaleModalOpen] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
 
   // Estados para la paginación
   const [currentPage, setCurrentPage] = useState(1);
@@ -167,7 +168,7 @@ const Home = () => {
             </div>
           </div>
           {/* Productos filtrados con paginación */}
-          <div className="flex flex-wrap justify-center w-full gap-5 p-4">
+          <div className="flex flex-wrap justify-around w-full gap-5 p-4">
             {currentProducts.map((product) => (
               <ProductCard
                 key={product.id}
@@ -225,22 +226,17 @@ const Home = () => {
             if (e.target.classList.contains("z-50")) setIsCartModalOpen(false);
           }}
         >
-          {" "}
           <div
             className="w-11/12 p-6 bg-white rounded-lg md:w-1/2"
             onClick={(e) => e.stopPropagation()}
           >
-            {" "}
             <button
               className="block w-full p-2 mb-4 text-white bg-red-600 rounded-md md:hidden"
               onClick={() => setIsCartModalOpen(false)}
             >
-              {" "}
-              Cerrar{" "}
-            </button>{" "}
-            <h2 className="mb-4 text-xl font-bold">
-              Productos Seleccionados
-            </h2>{" "}
+              Cerrar
+            </button>
+            <h2 className="mb-4 text-xl font-bold">Carrito de compras</h2>
             <Cart
               cartItems={cartItems}
               onRemoveItem={(index) =>
@@ -250,21 +246,50 @@ const Home = () => {
               }
               onCheckout={handleCheckout}
               onUpdateQuantity={handleUpdateQuantity}
-            />{" "}
-          </div>{" "}
+            />
+          </div>
         </div>
       )}
       {/* Modal para visualizar la imagen */}
       {isImageModalOpen && (
         <div
-          className="fixed top-0 left-0 z-50 flex justify-center w-full h-full py-2 bg-black bg-opacity-50"
-          onClick={() => setIsImageModalOpen(false)}
+          className="fixed top-0 left-0 z-50 flex justify-center w-full h-screen py-2 bg-black bg-opacity-50 md:h-full md:w-full"
+          onClick={(e) => {
+            if (e.target.classList.contains("z-50")) setIsImageModalOpen(false);
+          }}
         >
-          <div className="p-4 m-auto bg-transparent rounded-lg h-2/3 md:h-full">
+          <div className="w-auto h-auto p-4 m-auto bg-black rounded-lg bg-opacity-80 md:h-full ">
+            <div className="flex justify-end w-full">
+              <button
+                className="fixed z-50 pr-2 font-bold text-white hover:text-red-600 hover:font-extrabold"
+                onClick={() => setIsImageModalOpen(false)}
+              >
+                &#x2715;
+              </button>
+            </div>
+            <div className="flex justify-center text-3xl">
+              <button
+                onClick={() => setZoomLevel(zoomLevel + 0.1)}
+                className="absolute z-50 ml-10 text-white zoin"
+              >
+                <MdZoomIn />
+              </button>
+              <button
+                onClick={() => setZoomLevel(zoomLevel - 0.1)}
+                className="absolute z-50 mr-10 text-white"
+              >
+                <MdZoomOut />
+              </button>
+            </div>
             <img
               src={selectedImage}
               alt="Producto"
               className="object-contain w-full h-full md:object-cover md:w-full dropimage"
+              style={{
+                transform: `scale(${zoomLevel})`,
+                transition: "transform 0.2s",
+              }}
+              onLoad={() => setZoomLevel(1)}
             />
           </div>
         </div>

@@ -1,26 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.carrito,.carrito2{
-    height:400px;
+.carrito,
+.carrito2 {
+  height: 400px;
 }
-.dropimage{
-    filter:drop-shadow(15px 7px 5px black);
+.dropimage {
+  filter: drop-shadow(15px 7px 5px black);
 }
-.CardProdcut{
-    height:450px;
+.smalldetails img{
+  width:100px;
+  height:100px;
 }
-.CardReseña{
-    height:450px;
+.details{
+  height:600px;
 }
+.CardProdcut {
+  height: 450px;
+}
+.CardReseña {
+  height: 450px;
+}
+.groupes:hover .tooltip-text {
+  opacity: 1;
+}
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.groupes:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 @media (max-width: 1208px) {
-    .carrito,.carrito2 {
-        height: 500px;
-    }
+  .carrito,
+  .carrito2 {
+    height: 500px;
+  }
 }
 @media (max-width: 768px) {
-    .carrito,.carrito2 {
-        height: 400px;
-        overflow-y: scroll;
-    }
+  .carrito,
+  .carrito2 {
+    height: 400px;
+    overflow-y: scroll;
+  }
 }
