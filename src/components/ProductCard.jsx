@@ -9,7 +9,9 @@ import {
 } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import Cart from "../components/Cart";
+import "react-toastify/dist/ReactToastify.css";
 const ProductCard = ({
   product,
   onAddToCart,
@@ -17,7 +19,9 @@ const ProductCard = ({
   onToggleFavorite,
   reviews: initialReviews,
 }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [favorites, setFavorites] = useState(
+    () => JSON.parse(localStorage.getItem("favorites")) || []
+  );
   const [quantity, setQuantity] = useState(1);
   const [reviews, setReviews] = useState(initialReviews || []);
   const [newReview, setNewReview] = useState({
@@ -37,12 +41,7 @@ const ProductCard = ({
   };
   // Cargar datos persistidos
   useEffect(() => {
-    const savedFavorite = localStorage.getItem(`favorite-${product.id}`);
     const savedReviews = localStorage.getItem(`reviews-${product.id}`);
-
-    if (savedFavorite) {
-      setIsFavorite(JSON.parse(savedFavorite));
-    }
     if (savedReviews) {
       setReviews(JSON.parse(savedReviews));
     }
@@ -67,9 +66,8 @@ const ProductCard = ({
 
   // Guardar datos en localStorage
   useEffect(() => {
-    localStorage.setItem(`favorite-${product.id}`, JSON.stringify(isFavorite));
     localStorage.setItem(`reviews-${product.id}`, JSON.stringify(reviews));
-  }, [isFavorite, reviews, product.id]);
+  }, [reviews, product.id]);
 
   const handleAddClick = () => {
     if (quantity > 0) {
@@ -78,14 +76,17 @@ const ProductCard = ({
     }
   };
 
-  const handleFavoriteClick = () => {
-    setIsFavorite(!isFavorite);
-    if (onToggleFavorite) onToggleFavorite(product);
-    triggerNotification(
-      isFavorite
-        ? "Producto eliminado de favoritos."
-        : "Producto añadido a favoritos."
-    );
+  const handleAddToFavorites = () => {
+    if (!favorites.some((fav) => fav.id === product.id)) {
+      setFavorites((prevFavorites) => [...prevFavorites, product]);
+      localStorage.setItem(
+        "favorites",
+        JSON.stringify([...favorites, product])
+      );
+      toast.success(`${product.name} ha sido agregado a favoritos.`);
+    } else {
+      toast.info(`${product.name} ya está en favoritos.`);
+    }
   };
 
   const triggerNotification = (message) => {
@@ -171,6 +172,7 @@ const ProductCard = ({
   return (
     <div className="relative flex flex-col transition-all duration-300 shadow-lg w-72 bg-gradient-to-br from-white to-gray-100 dark:from-purple-800 dark:to-red-700 rounded-xl group hover:shadow-2xl CardProdcut">
       {/* Etiquetas dinámicas */}
+      <ToastContainer />
       {showNotification && (
         <div className="absolute top-0 left-0 z-40 w-full p-2 text-sm font-semibold text-white bg-green-500 rounded shadow-md">
           {showNotification}
@@ -292,10 +294,10 @@ const ProductCard = ({
               </button>
               <button
                 className="px-3 py-2 text-red-500 bg-gray-100 rounded-md hover:bg-red-100 dark:bg-gray-700 dark:hover:bg-red-900"
-                onClick={handleFavoriteClick}
+                onClick={handleAddToFavorites}
               >
                 <FaHeart
-                  className={isFavorite ? "text-red-500" : "text-gray-400"}
+                  className={favorites ? "text-red-500" : "text-gray-400"}
                 />
               </button>
             </div>

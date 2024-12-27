@@ -11,10 +11,9 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home products={products} />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Home products={products} />} />
           <Route
             path="/product/:id"
             element={<ProductDetails products={products} />}
