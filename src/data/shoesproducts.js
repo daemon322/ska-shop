@@ -127,12 +127,15 @@ export const products = [
     price: 297.0,
     discount: 40,
     initialStock: 94,
-    stock: 72,
+    stock: 0,
     colors:["white","black","red", "orange"],
     offerEndTime: "2024-12-25 23:59:59",
     tag: "Nuevo Lanzamiento",
-    sizes: ["38", "39", "40", "41", "42"],
+    sizes: ["39.5", "40", "40.5", "41", "41.5", "42", "42.5"],
     soles: "21384.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike,
   },
   {
@@ -146,11 +149,14 @@ export const products = [
     discount: 30,
     initialStock: 89,
     stock: 57,
-    colors:["white","black","red", "yellow"],
+    colors:["green","blue","brown", "white"],
     offerEndTime: "2024-12-29 23:59:59",
     tag: "Edición Limitada",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21785.40 soles",
+    image1: soccerpuma1,
+    image2: soccerpuma2,
+    image3: soccerpuma3,
     image: soccerpuma,
   },
   {
@@ -164,11 +170,14 @@ export const products = [
     discount: 20,
     initialStock: 153,
     stock: 72,
-    colors:["white","black","red", "yellow"],
+    colors:["purple","green","blue", "black"],
     offerEndTime: "2024-12-26 23:59:59",
     tag: "Oferta Especial",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "37440.00 soles",
+    image1: runningreebok1,
+    image2: runningreebok2,
+    image3: runningreebok3,
     image: runningreebok,
   },
   {
@@ -185,8 +194,11 @@ export const products = [
     colors:["white","black","red", "yellow"],
     offerEndTime: "2024-12-28 23:59:59",
     tag: "Oferta Especial",
-    sizes: ["38", "39", "40", "41", "42"],
+    sizes: ["39.5", "40", "40.5", "41", "41.5", "42", "42.5"],
     soles: "32000.00 soles",
+    image1: soccerpuma4,
+    image2: soccerpuma5,
+    image3: soccerpuma6,
     image: soccerpuma1,
   },
   {
@@ -205,6 +217,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20155.20 soles",
+    image1: runningpuma1,
+    image2: runningpuma2,
+    image3: runningpuma3,
     image: runningpuma,
   },
   {
@@ -223,6 +238,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9664.20 soles",
+    image1: casualreebok1,
+    image2: casualreebok2,
+    image3: casualreebok3,
     image: casualreebok,
   },
   {
@@ -241,6 +259,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "26600.00 soles",
+    image1: casualreebok2,
+    image2: casualreebok3,
+    image3: casualreebok4,
     image: casualreebok1,
   },
   {
@@ -259,6 +280,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19358.40 soles",
+    image1: runningpuma4,
+    image2: runningpuma5,
+    image3: runningpuma6,
     image: runningpuma1,
   },
   {
@@ -277,6 +301,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "35784.00 soles",
+    image1: basketreebok1,
+    image2: basketreebok2,
+    image3: basketreebok3,
     image: basketreebok,
   },
   {
@@ -295,6 +322,9 @@ export const products = [
     tag: "Oferta Especial",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16333.20 soles",
+    image1: basketnike1,
+    image2: basketnike2,
+    image3: basketnike3,
     image: basketnike,
   },
   {
@@ -313,6 +343,9 @@ export const products = [
     tag: "Edición Limitada",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "45364.50 soles",
+    image1: soccereebok1,
+    image2: soccereebok2,
+    image3: soccereebok,
     image: soccereebok,
   },
   {
@@ -331,6 +364,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17905.20 soles",
+    image1: soccereebok1,
+    image2: soccereebok2,
+    image3: soccereebok,
     image: soccereebok1,
   },
   {
@@ -349,6 +385,9 @@ export const products = [
     tag: "Oferta Especial",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42083.10 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketadidas,
   },
   {
@@ -367,6 +406,9 @@ export const products = [
     tag: "Edición Limitada",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42679.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike1,
   },
   {
@@ -385,6 +427,9 @@ export const products = [
     tag: "Oferta Especial",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "23011.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainreebok,
   },
   {
@@ -404,6 +449,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9369.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas,
   },
   {
@@ -423,6 +471,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "26964.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas,
   },
   {
@@ -441,6 +492,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17434.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas1,
   },
   {
@@ -460,6 +514,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10362.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike2,
   },
   {
@@ -479,6 +536,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10951.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma2,
   },
   {
@@ -498,6 +558,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "12243.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas2,
   },
   {
@@ -516,6 +579,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "60115.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike,
   },
   {
@@ -534,6 +600,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14171.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma3,
   },
   {
@@ -552,6 +621,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42193.90 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike,
   },
   {
@@ -571,6 +643,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6401.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike,
   },
   {
@@ -590,6 +665,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "33986.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas3,
   },
   {
@@ -608,6 +686,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9348.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketnike1,
   },
   {
@@ -626,6 +707,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20179.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike1,
   },
   {
@@ -645,6 +729,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11271.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketnike2,
   },
   {
@@ -664,6 +751,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "25920.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: socceradidas,
   },
   {
@@ -683,6 +773,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "31660.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma4,
   },
   {
@@ -702,6 +795,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "32937.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike2,
   },
   {
@@ -720,6 +816,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6806.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike3,
   },
   {
@@ -739,6 +838,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "37999.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas1,
   },
   {
@@ -757,6 +859,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "8464.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas2,
   },
   {
@@ -775,6 +880,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22003.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainpuma,
   },
   {
@@ -794,6 +902,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "77785.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketreebok1,
   },
   {
@@ -813,6 +924,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21476.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccereebok2,
   },
   {
@@ -831,6 +945,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42400.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas10,
   },
   {
@@ -849,6 +966,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "5667.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike3,
   },
   {
@@ -867,6 +987,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "39494.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma2,
   },
   {
@@ -886,6 +1009,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "5719.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualreebok2,
   },
   {
@@ -904,6 +1030,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "13866.30 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas1,
   },
   {
@@ -922,6 +1051,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "26832.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike1,
   },
   {
@@ -941,6 +1073,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11772.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma,
   },
   {
@@ -960,6 +1095,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "13902.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas3,
   },
   {
@@ -979,6 +1117,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10600.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike4,
   },
   {
@@ -997,6 +1138,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11693.70 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike5,
   },
   {
@@ -1016,6 +1160,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17641.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas4,
   },
   {
@@ -1035,6 +1182,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10700.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainpuma1,
   },
   {
@@ -1053,6 +1203,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22437.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningreebok1,
   },
   {
@@ -1072,6 +1225,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14818.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas4,
   },
   {
@@ -1091,6 +1247,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19440.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualpuma,
   },
   {
@@ -1109,6 +1268,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "8976.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma3,
   },
   {
@@ -1127,6 +1289,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "40512.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma5,
   },
   {
@@ -1145,6 +1310,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "41900.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike6,
   },
   {
@@ -1164,6 +1332,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "47044.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas5,
   },
   {
@@ -1183,6 +1354,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "39562.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainreebok1,
   },
   {
@@ -1202,6 +1376,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "4550.70 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma1,
   },
   {
@@ -1220,6 +1397,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "8908.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma6,
   },
   {
@@ -1239,6 +1419,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "34825.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketreebok2,
   },
   {
@@ -1258,6 +1441,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "23832.90 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike1,
   },
   {
@@ -1277,6 +1463,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10845.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualpuma1,
   },
   {
@@ -1296,6 +1485,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "60763.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualpuma2,
   },
   {
@@ -1314,6 +1506,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20929.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma2,
   },
   {
@@ -1332,6 +1527,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "39312.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketreebok3,
   },
   {
@@ -1350,6 +1548,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "15025.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: socceradidas1,
   },
   {
@@ -1369,6 +1570,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19948.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningreebok2,
   },
   {
@@ -1387,6 +1591,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "37483.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas2,
   },
   {
@@ -1405,6 +1612,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "18553.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainreebok2,
   },
   {
@@ -1424,6 +1634,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21295.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas3,
   },
   {
@@ -1443,6 +1656,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "7068.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccerpuma7,
   },
   {
@@ -1462,6 +1678,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20482.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike4,
   },
   {
@@ -1481,6 +1700,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "26465.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketadidas1,
   },
   {
@@ -1500,6 +1722,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10281.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma3,
   },
   {
@@ -1519,6 +1744,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "35154.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike7,
   },
   {
@@ -1538,6 +1766,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "27092.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas4,
   },
   {
@@ -1556,6 +1787,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10779.30 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainreebok3,
   },
   {
@@ -1575,6 +1809,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16044.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: soccernike8,
   },
   {
@@ -1594,6 +1831,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "32274.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningreebok3,
   },
   {
@@ -1612,6 +1852,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "7267.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike5,
   },
   {
@@ -1631,6 +1874,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "24569.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -1649,6 +1895,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "7776.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketnike3,
   },
   {
@@ -1668,6 +1917,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "15615.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainike6,
   },
   {
@@ -1687,6 +1939,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "15768.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike2,
   },
   {
@@ -1706,6 +1961,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9888.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma4,
   },
   {
@@ -1725,6 +1983,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "34070.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike3,
   },
   {
@@ -1744,6 +2005,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "36540.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas5,
   },
   {
@@ -1763,6 +2027,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "8582.70 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainpuma2,
   },
   {
@@ -1781,6 +2048,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16983.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketreebok4,
   },
   {
@@ -1799,6 +2069,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "26726.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma4,
   },
   {
@@ -1818,6 +2091,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "28868.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma5,
   },
   {
@@ -1837,6 +2113,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "7440.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike2,
   },
   {
@@ -1856,6 +2135,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9801.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma6,
   },
   {
@@ -1875,6 +2157,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6360.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -1893,6 +2178,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "35035.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualadidas6,
   },
   {
@@ -1912,6 +2200,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "23256.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainreebok4,
   },
   {
@@ -1931,6 +2222,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11475.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas6,
   },
   {
@@ -1950,6 +2244,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "40654.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma7,
   },
   {
@@ -1969,6 +2266,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "31251.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -1988,6 +2288,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9240.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: basketpuma8,
   },
   {
@@ -2007,6 +2310,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17352.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2025,6 +2331,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17336.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2043,6 +2352,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "36225.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2061,6 +2373,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "56544.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2080,6 +2395,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "53581.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualreebok3,
   },
   {
@@ -2099,6 +2417,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "13509.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas7,
   },
   {
@@ -2117,6 +2438,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "41342.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2136,6 +2460,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "5050.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2155,6 +2482,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "3762.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2173,6 +2503,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "71043.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2192,6 +2525,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "24786.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2211,6 +2547,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "28459.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2230,6 +2569,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11592.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualpuma3,
   },
   {
@@ -2248,6 +2590,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20328.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2267,6 +2612,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "46954.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2286,6 +2634,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "40131.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2304,6 +2655,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "37665.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualreebok4,
   },
   {
@@ -2323,6 +2677,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22281.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike3,
   },
   {
@@ -2342,6 +2699,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "47196.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike4,
   },
   {
@@ -2360,6 +2720,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20849.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2379,6 +2742,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16236.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2398,6 +2764,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "18547.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike5,
   },
   {
@@ -2417,6 +2786,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6423.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2436,6 +2808,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42024.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma5,
   },
   {
@@ -2454,6 +2829,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9188.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike4,
   },
   {
@@ -2472,6 +2850,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "8593.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2491,6 +2872,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10725.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike5,
   },
   {
@@ -2509,6 +2893,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14688.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma6,
   },
   {
@@ -2528,6 +2915,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10780.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2546,6 +2936,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "65807.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2564,6 +2957,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21135.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2583,6 +2979,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "45752.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningpuma7,
   },
   {
@@ -2602,6 +3001,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11288.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2621,6 +3023,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21276.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2640,6 +3045,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "25536.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2659,6 +3067,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "17080.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2678,6 +3089,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11254.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2697,6 +3111,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "31752.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2715,6 +3132,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "81792.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas5,
   },
   {
@@ -2734,6 +3154,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "47743.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas6,
   },
   {
@@ -2752,6 +3175,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "41698.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2770,6 +3196,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22579.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2788,6 +3217,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "7389.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2806,6 +3238,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11742.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2825,6 +3260,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "28195.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2844,6 +3282,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "23863.70 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2863,6 +3304,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "32619.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2882,6 +3326,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "42103.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2901,6 +3348,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "5097.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas8,
   },
   {
@@ -2920,6 +3370,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14790.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2938,6 +3391,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "33566.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2956,6 +3412,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "58346.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: trainadidas7,
   },
   {
@@ -2975,6 +3434,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "29975.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -2993,6 +3455,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "33701.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3012,6 +3477,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19333.30 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningadidas9,
   },
   {
@@ -3030,6 +3498,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6603.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3049,6 +3520,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14297.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3067,6 +3541,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9683.10 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3085,6 +3562,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "23716.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3104,6 +3584,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9824.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3122,6 +3605,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "37774.10 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3141,6 +3627,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14655.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3160,6 +3649,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6615.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3179,6 +3671,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22822.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3198,6 +3693,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "6336.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3217,6 +3715,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "25318.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3235,6 +3736,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "12589.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: runningnike6,
   },
   {
@@ -3254,6 +3758,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19197.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3273,6 +3780,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "13026.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3292,6 +3802,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14208.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3311,6 +3824,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14742.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3330,6 +3846,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "29493.10 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3348,6 +3867,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "10987.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3367,6 +3889,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "46715.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3386,6 +3911,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "74923.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3405,6 +3933,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "25582.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3423,6 +3954,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9643.20 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: casualnike6,
   },
   {
@@ -3442,6 +3976,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "32850.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3461,6 +3998,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14500.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3480,6 +4020,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14229.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3499,6 +4042,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14535.90 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3518,6 +4064,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "5482.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3537,6 +4086,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "47502.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3556,6 +4108,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "25848.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3575,6 +4130,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "14404.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3594,6 +4152,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "60328.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3613,6 +4174,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "21182.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3632,6 +4196,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "30711.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3650,6 +4217,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "29520.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3669,6 +4239,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "9975.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3688,6 +4261,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "38237.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3707,6 +4283,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16731.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3726,6 +4305,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "16936.00 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3745,6 +4327,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "20462.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3763,6 +4348,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "11097.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3781,6 +4369,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "12956.40 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3799,6 +4390,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "19180.80 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3818,6 +4412,9 @@ export const products = [
 
     sizes: ["38", "39", "40", "41", "42"],
     soles: "22809.60 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
   {
@@ -3836,6 +4433,9 @@ export const products = [
     tag: "Nuevo Lanzamiento",
     sizes: ["38", "39", "40", "41", "42"],
     soles: "34627.50 soles",
+    image1: soccernike1,
+    image2: soccernike2,
+    image3: soccernike3,
     image: "",
   },
 ];

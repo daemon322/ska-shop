@@ -67,6 +67,10 @@ const ProductDetails = ({ products }) => {
     }
   }, [product]);
 
+  useEffect(() => {
+    setMainImage(product.image);
+  }, [product]);
+
   const handleProductClick = (productId) => {
     setCurrentProductId(productId);
     navigate(`/product/${productId}`);
@@ -154,15 +158,6 @@ const ProductDetails = ({ products }) => {
     if (sortOption === "rating") return b.rating - a.rating;
     return 0;
   });
-
-  const formatTimeRemaining = (endTime) => {
-    const difference = new Date(endTime) - new Date();
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((difference / (1000 * 60)) % 60);
-    return `${days}d ${hours}h ${minutes}m`;
-  };
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -208,7 +203,8 @@ const ProductDetails = ({ products }) => {
       </div>
     ),
   };
-
+  const [mainImage, setMainImage] = useState(product.image);
+  const [isZoomed, setIsZoomed] = useState(false);
   const isOfferValid =
     product.offerEndTime && new Date(product.offerEndTime) > new Date();
 
@@ -224,19 +220,50 @@ const ProductDetails = ({ products }) => {
         )}
         <div className="flex flex-col items-start h-auto gap-2 p-6 rounded-lg shadow-lg bg-gradient-to-b from-gray-800 to-red-600 dark:from-gray-200 dark:to-gray-900">
           <div className="flex flex-wrap w-full ">
-            <div className="flex flex-col w-full  md:w-2/3 xl:flex-row h-full xl:h-[600px]">
-              <div className="smalldetails">
+            <div className="flex flex-col w-full md:w-2/3 xl:flex-row h-full xl:h-[600px]">
+              {" "}
+              <div className="flex flex-row justify-center gap-4 smalldetails xl:flex-col">
+                {" "}
+                {product.image1 && (
+                  <img
+                    src={product.image1}
+                    alt={product.name}
+                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
+                    onClick={() => setMainImage(product.image1)}
+                  />
+                )}{" "}
+                {product.image2 && (
+                  <img
+                    src={product.image2}
+                    alt={product.name}
+                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
+                    onClick={() => setMainImage(product.image2)}
+                  />
+                )}{" "}
+                {product.image3 && (
+                  <img
+                    src={product.image3}
+                    alt={product.name}
+                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
+                    onClick={() => setMainImage(product.image3)}
+                  />
+                )}{" "}
+              </div>{" "}
+              <div
+                className={`relative w-full h-full ${
+                  isZoomed ? "cursor-zoom-out" : "cursor-zoom-in"
+                }`}
+              >
+                {" "}
                 <img
-                  src={product.image}
+                  src={mainImage}
                   alt={product.name}
-                  className="object-cover w-full h-full transition-transform duration-300 rounded-lg shadow-md hover:scale-105"
-                />
-              </div>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="object-cover w-full h-full transition-transform duration-300 rounded-lg shadow-md hover:scale-105"
-              />
+                  className={`object-cover w-full h-full transition-transform duration-300 rounded-lg shadow-md ${
+                    isZoomed ? "scale-150" : "scale-100"
+                  }`}
+                  onClick={() => setIsZoomed(!isZoomed)}
+                />{" "}
+              </div>{" "}
             </div>
             <div className="flex flex-col w-full p-4  md:w-1/3 relative right-0 h-full md:absolute md:h-[750px] justify-between">
               <h1 className="text-4xl font-bold text-center text-gray-100 dark:text-gray-900">
@@ -266,15 +293,26 @@ const ProductDetails = ({ products }) => {
                   )}
                 </>
               )}
-              <p className="text-lg font-semibold text-gray-300 dark:text-gray-700">
-                Precio original: S/ {product.originalPrice}
-              </p>
+              {isOfferValid ? (
+                <div className="mt-2">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Precio original:{" "}
+                    <span className="text-red-500 line-through">
+                      S/ {product.originalPrice}
+                    </span>
+                  </p>
+                  <p className="text-lg font-bold text-green-600 dark:text-green-400">
+                    Precio con descuento: S/ {product.price}
+                  </p>
+                </div>
+              ) : (
+                <p className="text-lg font-bold text-gray-800 dark:text-gray-200">
+                  Precio: S/ {product.originalPrice}
+                </p>
+              )}
               {isOfferValid && (
                 <>
                   <div className="">
-                    <p className="text-2xl font-bold text-green-400 dark:text-green-700">
-                      Precio con descuento: S/ {product.price}
-                    </p>
                     <p className="flex items-center mt-1 text-sm text-red-500">
                       <FaTag className="mr-2" /> Descuento: {product.discount}%
                     </p>

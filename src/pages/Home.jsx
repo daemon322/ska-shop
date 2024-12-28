@@ -7,6 +7,8 @@ import CategoryFilter from "../components/CategoryFilter";
 import { products } from "../data/shoesproducts";
 import ImageSlider from "../components/ImageSlider";
 import { MdSearch, MdZoomIn, MdZoomOut } from "react-icons/md";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
@@ -39,18 +41,21 @@ const Home = () => {
 
   const handleAddToCart = (item) => {
     setCartItems((prevItems) => {
-      const existingItem = prevItems.find(
-        (cartItem) => cartItem.id === item.id
+      // Busca si existe un item con el mismo cartItemId
+      const existingItemIndex = prevItems.findIndex(
+        (cartItem) => cartItem.cartItemId === item.cartItemId
       );
 
-      if (existingItem) {
-        return prevItems.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+      if (existingItemIndex >= 0) {
+        // Si existe, actualiza la cantidad
+        return prevItems.map((cartItem, index) =>
+          index === existingItemIndex
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
             : cartItem
         );
       } else {
-        return [...prevItems, { ...item, quantity: 1 }];
+        // Si no existe, añade el nuevo item
+        return [...prevItems, item];
       }
     });
     setIsCartModalOpen(true);
@@ -78,7 +83,11 @@ const Home = () => {
     setIsCartModalOpen(false);
     setIsSaleModalOpen(true); // Abrir modal del resumen de venta
   };
-
+  const handleRemoveFromCart = (index) => {
+    const updatedCart = cartItems.filter((_, i) => i !== index);
+    setCartItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+  };
   const handlePrint = () => {
     if (saleDetails) {
       const printWindow = window.open("", "PRINT", "height=600,width=800");
@@ -139,6 +148,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <ToastContainer />
       <main className="flex flex-wrap pt-20 md:pt-20 bg-gray-950 max-md:flex-wrap">
         <section className="w-full">
           {/* Filtro de Categorías */}
@@ -239,12 +249,7 @@ const Home = () => {
             <h2 className="mb-4 text-xl font-bold">Carrito de compras</h2>
             <Cart
               cartItems={cartItems}
-              onRemoveItem={(index) =>
-                setCartItems((prevItems) =>
-                  prevItems.filter((_, i) => i !== index)
-                )
-              }
-              onCheckout={handleCheckout}
+              onRemoveItem={handleRemoveFromCart}
               onUpdateQuantity={handleUpdateQuantity}
             />
           </div>
