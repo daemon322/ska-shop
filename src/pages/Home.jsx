@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Cart from "../components/Cart";
@@ -12,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [saleDetails, setSaleDetails] = useState(null);
@@ -252,6 +254,20 @@ const Home = () => {
               onRemoveItem={handleRemoveFromCart}
               onUpdateQuantity={handleUpdateQuantity}
             />
+             <div className="flex justify-end mt-6">
+            <button
+              className="px-4 py-2 mr-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+              onClick={() => navigate("/cart")}
+            >
+              Ver carrito
+            </button>
+            <button
+              className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600"
+              onClick={() => setIsCartModalOpen(false)}
+            >
+              Continuar comprando
+            </button>
+          </div>
           </div>
         </div>
       )}

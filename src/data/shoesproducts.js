@@ -127,7 +127,7 @@ export const products = [
     price: 297.0,
     discount: 40,
     initialStock: 94,
-    stock: 0,
+    stock: 54,
     colors:["white","black","red", "orange"],
     offerEndTime: "2024-12-25 23:59:59",
     tag: "Nuevo Lanzamiento",

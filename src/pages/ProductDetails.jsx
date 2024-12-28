@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 const ProductDetails = ({ products }) => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const productDetailsRef = useRef(null);
   const [currentProductId, setCurrentProductId] = useState(Number(id));
   const [showNotification, setShowNotification] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -74,6 +75,7 @@ const ProductDetails = ({ products }) => {
   const handleProductClick = (productId) => {
     setCurrentProductId(productId);
     navigate(`/product/${productId}`);
+    productDetailsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleAddToCart = () => {
@@ -101,7 +103,7 @@ const ProductDetails = ({ products }) => {
       setIsCartModalOpen(true);
       toast.success("Producto añadido al carrito correctamente!");
     } else {
-      triggerNotification("Por favor, seleccione una talla y un color.");
+      toast.error("Por favor, seleccione una talla y un color.");
     }
   };
 
@@ -211,7 +213,7 @@ const ProductDetails = ({ products }) => {
   return (
     <>
       <Header />
-      <div className="w-full pt-16 dark:bg-gray-900">
+      <div ref={productDetailsRef} className="w-full pt-16 dark:bg-gray-900">
         <ToastContainer />
         {showNotification && (
           <div className="absolute top-0 left-0 z-40 w-full p-2 text-sm font-semibold text-white bg-green-500 rounded shadow-md">
