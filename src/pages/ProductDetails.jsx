@@ -1,4 +1,4 @@
-import { useState, useEffect,useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -100,13 +100,25 @@ const ProductDetails = ({ products }) => {
         localStorage.setItem("cartItems", JSON.stringify(updatedCart));
       }
 
-      setIsCartModalOpen(true);
       toast.success("Producto añadido al carrito correctamente!");
     } else {
       toast.error("Por favor, seleccione una talla y un color.");
     }
-  };
+    // Guardar un indicador en localStorage
+    localStorage.setItem("showCartModal", "true");
 
+    // Recargar la página
+    window.location.reload();
+  };
+  useEffect(() => {
+    // Verificar si se debe mostrar el modal
+    const shouldShowModal = localStorage.getItem("showCartModal");
+    if (shouldShowModal) {
+      setIsCartModalOpen(true);
+      // Limpiar el indicador para que no se muestre nuevamente
+      localStorage.removeItem("showCartModal");
+    }
+  }, []);
   const handleRemoveFromCart = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);
     setCartItems(updatedCart);
@@ -223,40 +235,24 @@ const ProductDetails = ({ products }) => {
         <div className="flex flex-col items-start h-auto gap-2 p-6 rounded-lg shadow-lg bg-gradient-to-b from-gray-800 to-red-600 dark:from-gray-200 dark:to-gray-900">
           <div className="flex flex-wrap w-full ">
             <div className="flex flex-col w-full md:w-2/3 xl:flex-row h-full xl:h-[600px]">
-              {" "}
-              <div className="flex flex-row justify-center gap-4 smalldetails xl:flex-col">
-                {" "}
-                {product.image1 && (
-                  <img
-                    src={product.image1}
-                    alt={product.name}
-                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
-                    onClick={() => setMainImage(product.image1)}
-                  />
-                )}{" "}
-                {product.image2 && (
-                  <img
-                    src={product.image2}
-                    alt={product.name}
-                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
-                    onClick={() => setMainImage(product.image2)}
-                  />
-                )}{" "}
-                {product.image3 && (
-                  <img
-                    src={product.image3}
-                    alt={product.name}
-                    className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
-                    onClick={() => setMainImage(product.image3)}
-                  />
-                )}{" "}
-              </div>{" "}
+              <div className="flex flex-row justify-center gap-4 xl:flex-col">
+                {[product.image1, product.image2, product.image3]
+                  .filter((img) => img) // Filtrar imágenes no definidas
+                  .map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${product.name} - Image ${index + 1}`}
+                      className="object-cover w-32 h-32 transition-transform duration-300 rounded-lg shadow-md cursor-pointer hover:scale-105"
+                      onClick={() => setMainImage(img)}
+                    />
+                  ))}
+              </div>
               <div
                 className={`relative w-full h-full ${
                   isZoomed ? "cursor-zoom-out" : "cursor-zoom-in"
                 }`}
               >
-                {" "}
                 <img
                   src={mainImage}
                   alt={product.name}
@@ -264,8 +260,8 @@ const ProductDetails = ({ products }) => {
                     isZoomed ? "scale-150" : "scale-100"
                   }`}
                   onClick={() => setIsZoomed(!isZoomed)}
-                />{" "}
-              </div>{" "}
+                />
+              </div>
             </div>
             <div className="flex flex-col w-full p-4  md:w-1/3 relative right-0 h-full md:absolute md:h-[750px] justify-between">
               <h1 className="text-4xl font-bold text-center text-gray-100 dark:text-gray-900">
@@ -273,7 +269,7 @@ const ProductDetails = ({ products }) => {
               </h1>
               <div className="flex justify-between w-full ">
                 <p className="text-sm text-gray-300 dark:text-gray-700">
-                  Categoría:{" "}
+                  Categoría:
                   <span className="font-medium">{product.category}</span>
                 </p>
                 <p className="text-sm text-gray-300 dark:text-gray-700">
@@ -298,7 +294,7 @@ const ProductDetails = ({ products }) => {
               {isOfferValid ? (
                 <div className="mt-2">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    Precio original:{" "}
+                    Precio original:
                     <span className="text-red-500 line-through">
                       S/ {product.originalPrice}
                     </span>
@@ -327,7 +323,7 @@ const ProductDetails = ({ products }) => {
                   <p className="hidden mt-2">
                     <FaStar className="inline mr-1" />
                     Stock inicial: {product.initialStock}
-                  </p>{" "}
+                  </p>
                   <p className="hidden text-sm text-gray-500">
                     <FaStar className="inline mr-1" />
                     Stock disponible: {product.stock}

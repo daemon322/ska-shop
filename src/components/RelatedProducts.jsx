@@ -102,12 +102,25 @@ const RelatedProducts = ({
       }
 
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
-      setIsCartModalOpen(true);
       toast.success("Producto añadido al carrito correctamente!");
     } else {
       toast.error("Por favor, seleccione una talla y un color.");
     }
+    // Guardar un indicador en localStorage
+    localStorage.setItem("showCartModal", "true");
+
+    // Recargar la página
+    window.location.reload();
   };
+  useEffect(() => {
+    // Verificar si se debe mostrar el modal
+    const shouldShowModal = localStorage.getItem("showCartModal");
+    if (shouldShowModal) {
+      setIsCartModalOpen(true);
+      // Limpiar el indicador para que no se muestre nuevamente
+      localStorage.removeItem("showCartModal");
+    }
+  }, []);
   const handleOptionChange = (productId, optionType, value) => {
     setSelectedOptions((prevOptions) => ({
       ...prevOptions,
