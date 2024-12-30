@@ -12,6 +12,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "../components/Cart"; // Importa el componente Cart
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const OtherProduct = ({ otherProducts, handleProductClick, onAddToCart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -249,7 +250,7 @@ const OtherProduct = ({ otherProducts, handleProductClick, onAddToCart }) => {
       </div>
 
       <div className="flex flex-wrap justify-around w-full py-2">
-        {otherProducts.map((product) => {
+        {currentProducts.map((product) => {
           const isOfferValid =
             product.offerEndTime && new Date(product.offerEndTime) > new Date();
           const stockPercentage =
@@ -261,7 +262,14 @@ const OtherProduct = ({ otherProducts, handleProductClick, onAddToCart }) => {
               product.reviews?.length || 0;
 
           return (
-            <div key={product.id} className="pb-4 ">
+            <motion.div
+              key={product.id}
+              className="pb-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: otherProducts * 0.1 }}
+              viewport={{ once: true }}
+            >
               <div className="relative flex flex-col transition-all duration-300 shadow-lg bg-gradient-to-t from-white to-gray-100 dark:from-black dark:to-gray-700 rounded-xl group hover:shadow-2xl h-[480px] w-[305px]">
                 {isOfferValid && (
                   <div className="absolute right-0 z-10 flex items-center px-3 py-1 text-xs font-bold text-white bg-red-500 rounded-tl-full bottom-[220px] animate-pulse">
@@ -417,7 +425,7 @@ const OtherProduct = ({ otherProducts, handleProductClick, onAddToCart }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

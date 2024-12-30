@@ -131,12 +131,6 @@ const ProductDetails = ({ products }) => {
     setCartItems(updatedCart);
     localStorage.setItem("cartItems", JSON.stringify(updatedCart));
   };
-
-  const triggerNotification = (message) => {
-    setShowNotification(message);
-    setTimeout(() => setShowNotification(false), 3000);
-  };
-
   const handleAddToFavorites = () => {
     if (!favorites.some((fav) => fav.id === product.id)) {
       setFavorites((prevFavorites) => [...prevFavorites, product]);
@@ -232,7 +226,7 @@ const ProductDetails = ({ products }) => {
             {showNotification}
           </div>
         )}
-        <div className="flex flex-col items-start h-auto gap-2 p-6 rounded-lg shadow-lg bg-gradient-to-b from-gray-800 to-red-600 dark:from-gray-200 dark:to-gray-900">
+        <div className="flex flex-col items-start h-auto gap-2 p-6 rounded-lg shadow-lg bg-gradient-to-b from-gray-800 to-red-600 dark:from-gray-200 dark:to-gray-900 animate-fadeIn">
           <div className="flex flex-wrap w-full ">
             <div className="flex flex-col w-full md:w-2/3 xl:flex-row h-full xl:h-[600px]">
               <div className="flex flex-row justify-center gap-4 xl:flex-col">
